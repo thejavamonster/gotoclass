@@ -3,6 +3,9 @@ import time
 import datetime
 import pause
 from datetime import datetime
+from datetime import date
+import calendar
+
 
 hsc = "https://pcadobeconnect.stanford.edu/r4tu0gse1obp/"
 wellness = "https://pcadobeconnect.stanford.edu/rpou6wauczx0/"
@@ -19,8 +22,11 @@ chrome_path = 'C:/Program Files/Google/Chrome/Application/chrome.exe %s'
 year = datetime.now().year
 month = datetime.now().month
 day = datetime.now().day
-weekday = datetime.now().weekday
 
+date_object = datetime.today()
+
+weekday = date_object.weekday()
+print(weekday)
 def open(url):
     webbrowser.get(chrome_path).open(url)
 
